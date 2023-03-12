@@ -1,0 +1,180 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #24145e;
+}
+
+@keyframes rotation {
+    to{
+        transform: rotateZ(360deg)
+    }
+    
+}
+@keyframes shrinkAndGrow {
+    0%{
+        transform: scale(0)
+    }
+    25%{
+        transform: scale(0.5);
+    }
+    50%{
+        transform: scale(0);
+    }
+    75%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0);
+    }
+    
+}
+@keyframes expendHrizontal {
+    from{
+        transform: scaleX(0)
+    }
+    to{
+        transform: scaleX(1);
+    }  
+}
+
+@keyframes shirnkHorizontal {
+    to{
+        transform: scaleX(0)
+    }
+}
+
+@keyframes appearFromBottom {
+    from{
+        transform: translateY(1000px)
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+@keyframes soaking {
+    to{
+        transform: translateY(-250px) scale(0);
+    }
+}
+
+@keyframes shakingUpAndDown {
+    from{
+        transform: translateY(0)
+    }
+    25%{
+        transform: translateY(5px)
+    }
+    50%{
+        transform: translateY(-5px)
+    }
+    75%{
+        transform: translateY(5px)
+    }
+    100%{
+        transform: translateY(0px)
+    }
+}
+
+#planet_2{
+    animation-name: rotation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+#planet_1{
+    animation-name: rotation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    transform-box: fill-box;
+    transform-origin: center;
+
+}
+
+#star_1{
+animation: shrinkAndGrow 4s infinite;
+transform-origin: center;
+transform-box: fill-box;
+}
+
+#star_2{
+animation: shrinkAndGrow 4s infinite;
+transform-origin: center;
+transform-box: fill-box;
+}
+
+#star_3{
+animation: shrinkAndGrow 2s infinite;
+transform-origin: center;
+transform-box: fill-box;
+}
+
+#star_4{
+animation: shrinkAndGrow 4s infinite;
+transform-origin: center;
+transform-box: fill-box;
+}
+
+#star_5{
+animation: shrinkAndGrow 11s infinite;
+transform-origin: center;
+transform-box: fill-box;
+}
+
+#star_6{
+animation: shrinkAndGrow 2s infinite;
+transform-origin: center;
+transform-box: fill-box;
+}
+
+#star_7{
+animation: shrinkAndGrow 4s infinite;
+transform-origin: center;
+transform-box: fill-box;
+}
+
+#star_8{
+animation: shrinkAndGrow 2s infinite;
+transform-origin: center;
+transform-box: fill-box;
+}
+
+#star_9{
+animation: shrinkAndGrow 3s infinite;
+transform-origin: center;
+transform-box: fill-box;
+}
+
+#UFO-beam{
+animation: expendHrizontal 3.5s ;
+transform-origin: center;
+transform-box: fill-box;
+}
+
+#number-0{
+animation: appearFromBottom 3.5s ;
+animation-timing-function: cubic-bezier(.68,1.29,.84,-0.56);
+}
+
+#alien_hand-R, #alien_hand-L{
+    animation: shakingUpAndDown 1s infinite;
+animation-timing-function:cubic-bezier(.14,1.25,.83,-0.47);
+}
+
+#number-0-soaking{
+    animation: soaking 2s;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+#UFO-beam-disappearing{
+    animation: shirnkHorizontal 2s;
+    transform-origin: center;
+    transform-box: fill-box;
+
+}
